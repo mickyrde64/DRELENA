@@ -1,10 +1,9 @@
-import { GoogleGenAI, ChatSession, GenerativeModel } from "@google/genai";
+import { GoogleGenAI, Chat } from "@google/genai";
 
 const apiKey = process.env.API_KEY || '';
 
 let ai: GoogleGenAI | null = null;
-let model: GenerativeModel | null = null;
-let chatSession: ChatSession | null = null;
+let chatSession: Chat | null = null;
 
 const SYSTEM_INSTRUCTION = `
 You are a helpful, professional, and friendly virtual assistant for Dr. Elena Georgiou's dental clinic.
@@ -53,7 +52,7 @@ export const sendMessageToGemini = async (message: string): Promise<string> => {
     }
 
     const response = await chatSession.sendMessage({ message });
-    return response.text;
+    return response.text || "";
   } catch (error) {
     console.error("Gemini Error:", error);
     return "I'm having trouble connecting right now. Please try again later or call our office.";

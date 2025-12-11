@@ -24,7 +24,7 @@ export const Contact: React.FC = () => {
                 </div>
                 <div>
                   <h4 className="font-bold text-gray-900">Visit Us</h4>
-                  <p className="text-gray-600">123 Health Avenue, Medical District<br/>Nicosia, Cyprus 2000</p>
+                  <p className="text-gray-600">Arsinois Avenue 13, Mario Block B, Office 112,Cyprus<br/>Polis, Cyprus 8820 </p>
                 </div>
               </div>
 
@@ -45,17 +45,25 @@ export const Contact: React.FC = () => {
                 </div>
                 <div>
                   <h4 className="font-bold text-gray-900">Email Us</h4>
-                  <p className="text-gray-600">contact@drgeorgiou.com</p>
+                  <p className="text-gray-600">dentist.helen.georgiou@gmail.com</p>
                 </div>
               </div>
             </div>
 
-            {/* Map Placeholder */}
-            <div className="mt-10 h-64 bg-gray-100 rounded-2xl overflow-hidden relative">
-              <div className="absolute inset-0 flex items-center justify-center text-gray-400 bg-gray-200">
-                <span className="flex items-center gap-2"><MapPin size={20}/> Google Maps Embed</span>
-              </div>
-              {/* Actual iframe would go here in prod */}
+            {/* Map */}
+            <div className="mt-10 h-64 bg-gray-100 rounded-2xl overflow-hidden relative shadow-md border border-gray-100">
+              <iframe 
+                width="100%" 
+                height="100%" 
+                frameBorder="0" 
+                scrolling="no" 
+                marginHeight={0} 
+                marginWidth={0} 
+                src="https://maps.google.com/maps?width=100%25&height=600&hl=en&q=Avenue%2013,%20Mario,%20Arsinois-Block%20B,%20Office%20112,%20Polis%20Chrysochous%208820,%20Cyprus+(Dr.%20Elena%20Georgiou)&t=&z=16&ie=UTF8&iwloc=B&output=embed"
+                title="Google Map Location"
+                className="w-full h-full"
+              >
+              </iframe>
             </div>
           </div>
 
