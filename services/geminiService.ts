@@ -1,5 +1,8 @@
 import { GoogleGenAI, Chat } from "@google/genai";
 
+// Ensure TypeScript recognizes process.env without needing strict node types for this file
+declare const process: { env: { [key: string]: string | undefined } };
+
 const apiKey = process.env.API_KEY || '';
 
 let ai: GoogleGenAI | null = null;
